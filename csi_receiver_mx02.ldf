@@ -2,8 +2,32 @@
 <BaliProject version="3.2" title="csi_receiver_mx02" device="LCMXO2-7000HE-4TG144C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
-        <Options/>
+        <Options def_top="csi_header_ecc"/>
+        <Source name="histogram_top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="histogram_top"/>
+        </Source>
+        <Source name="i2c_top.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="i2c_core.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="i2c_ctrl.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="dphy_iserdes.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="header_ecc.v" type="Verilog" type_short="Verilog">
+            <Options top_module="csi_header_ecc"/>
+        </Source>
+        <Source name="csi_rx_packet_handler.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options/>
+        </Source>
         <Source name="csi_receiver_mx02.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>
     </Implementation>
